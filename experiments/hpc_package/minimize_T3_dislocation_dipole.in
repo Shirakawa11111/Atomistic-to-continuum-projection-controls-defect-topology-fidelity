@@ -1,0 +1,22 @@
+# Route A — 0 K AIREBO minimisation (relaxed reference)
+units           metal
+dimension       3
+boundary        p p f
+atom_style      atomic
+read_data       cases/T3_dislocation_dipole.data
+pair_style      airebo 3.0 1 1
+pair_coeff      * * CH.airebo C
+neighbor        2.0 bin
+neigh_modify    every 1 delay 0 check yes
+thermo          100
+thermo_style    custom step pe fmax lx ly
+min_style       cg
+minimize        1e-08 1e-08 100000 1000000
+fix             relax all box/relax x 0.0 y 0.0 couple none vmax 0.001
+minimize        1e-08 1e-08 100000 1000000
+unfix           relax
+min_style       cg
+minimize        1e-08 1e-08 100000 1000000
+write_dump      all custom relaxed_T3_dislocation_dipole.dump id type x y z modify sort id
+write_data      relaxed_T3_dislocation_dipole.data
+print           "MINIMIZE_DONE pe = $(pe) atoms = $(atoms)"

@@ -1,0 +1,385 @@
+{
+  "nx": 512,
+  "max_steps": 20000,
+  "lams": [
+    0.01,
+    0.0
+  ],
+  "n_rows": 216,
+  "relaxed": [
+    "T0_pristine",
+    "T1_vacancy",
+    "T2_stone_wales",
+    "T3_dislocation_dipole",
+    "T4_low_angle_gb",
+    "T5_high_angle_gb"
+  ],
+  "md_snapshots": {},
+  "per_lam": {
+    "0.01": {
+      "verdict": {
+        "D1_met": true,
+        "D2_met": true,
+        "D_met": true,
+        "max_cv": 9.78401868394467,
+        "cv_threshold": 0.2,
+        "d1_hits": [
+          [
+            "Ef_rel",
+            "T1_vacancy",
+            9.78401868394467
+          ],
+          [
+            "Ef_rel",
+            "T2_stone_wales",
+            4.067231391093387
+          ],
+          [
+            "Ef_rel",
+            "T3_dislocation_dipole",
+            0.49273515265305584
+          ],
+          [
+            "Ef_rel",
+            "T4_low_angle_gb",
+            0.47291353498686534
+          ],
+          [
+            "Ef_rel",
+            "T5_high_angle_gb",
+            0.44954972434945545
+          ],
+          [
+            "ring_l1_init",
+            "T1_vacancy",
+            0.8595736899943692
+          ],
+          [
+            "ring_l1_init",
+            "T2_stone_wales",
+            0.8548082220271352
+          ],
+          [
+            "ring_l1_init",
+            "T3_dislocation_dipole",
+            0.7917710875161172
+          ],
+          [
+            "ring_l1_init",
+            "T4_low_angle_gb",
+            0.8671784955011556
+          ],
+          [
+            "ring_l1_init",
+            "T5_high_angle_gb",
+            0.8298289491667309
+          ],
+          [
+            "l2_change",
+            "T1_vacancy",
+            0.3734652342057669
+          ],
+          [
+            "l2_change",
+            "T2_stone_wales",
+            0.6064480913158067
+          ],
+          [
+            "l2_change",
+            "T3_dislocation_dipole",
+            0.6075880582316244
+          ],
+          [
+            "l2_change",
+            "T4_low_angle_gb",
+            0.6139691133998102
+          ],
+          [
+            "l2_change",
+            "T5_high_angle_gb",
+            0.6329247979626673
+          ],
+          [
+            "roughness_init",
+            "T1_vacancy",
+            0.6565559696888942
+          ],
+          [
+            "roughness_init",
+            "T2_stone_wales",
+            0.9462972098193904
+          ],
+          [
+            "roughness_init",
+            "T3_dislocation_dipole",
+            0.9885646649027403
+          ],
+          [
+            "roughness_init",
+            "T4_low_angle_gb",
+            1.060446298584864
+          ],
+          [
+            "roughness_init",
+            "T5_high_angle_gb",
+            1.1955576320327261
+          ]
+        ],
+        "min_rank_corr": -0.43636363636363645,
+        "n_admissible": 66,
+        "n_total": 108,
+        "observables": [
+          "Ef_rel",
+          "ring_l1_init",
+          "l2_change",
+          "roughness_init"
+        ],
+        "outcome": "A: decision tree"
+      },
+      "variance_components": {
+        "Ef_rel": {
+          "total": 0.06576047051680378,
+          "sigma2_protocol": 0.010453572737471526,
+          "sigma2_case": 0.034362328206315025,
+          "sigma2_resid": 0.020944569573017217
+        },
+        "ring_l1_init": {
+          "total": 1.020226466937823,
+          "sigma2_protocol": 0.9550723126433499,
+          "sigma2_case": 0.019392061820599785,
+          "sigma2_resid": 0.045762092473873334
+        },
+        "l2_change": {
+          "total": 0.10582185538884274,
+          "sigma2_protocol": 0.08794812824202941,
+          "sigma2_case": 0.004180762000268211,
+          "sigma2_resid": 0.013692965146545092
+        },
+        "roughness_init": {
+          "total": 482.4822987130378,
+          "sigma2_protocol": 401.3101135029446,
+          "sigma2_case": 16.66225268377029,
+          "sigma2_resid": 64.50993252632281
+        }
+      },
+      "protocol_cv_by_case": {
+        "Ef_rel": {
+          "T0_pristine": NaN,
+          "T1_vacancy": 9.78401868394467,
+          "T2_stone_wales": 4.067231391093387,
+          "T3_dislocation_dipole": 0.49273515265305584,
+          "T4_low_angle_gb": 0.47291353498686534,
+          "T5_high_angle_gb": 0.44954972434945545
+        },
+        "ring_l1_init": {
+          "T0_pristine": 0.8380286453475526,
+          "T1_vacancy": 0.8595736899943692,
+          "T2_stone_wales": 0.8548082220271352,
+          "T3_dislocation_dipole": 0.7917710875161172,
+          "T4_low_angle_gb": 0.8671784955011556,
+          "T5_high_angle_gb": 0.8298289491667309
+        },
+        "l2_change": {
+          "T0_pristine": 0.37892187105806185,
+          "T1_vacancy": 0.3734652342057669,
+          "T2_stone_wales": 0.6064480913158067,
+          "T3_dislocation_dipole": 0.6075880582316244,
+          "T4_low_angle_gb": 0.6139691133998102,
+          "T5_high_angle_gb": 0.6329247979626673
+        },
+        "roughness_init": {
+          "T0_pristine": 0.673031021113737,
+          "T1_vacancy": 0.6565559696888942,
+          "T2_stone_wales": 0.9462972098193904,
+          "T3_dislocation_dipole": 0.9885646649027403,
+          "T4_low_angle_gb": 1.060446298584864,
+          "T5_high_angle_gb": 1.1955576320327261
+        }
+      },
+      "n_admissible_protocols": 11
+    },
+    "0.0": {
+      "verdict": {
+        "D1_met": true,
+        "D2_met": true,
+        "D_met": true,
+        "max_cv": 12.537552531015484,
+        "cv_threshold": 0.2,
+        "d1_hits": [
+          [
+            "Ef_rel",
+            "T1_vacancy",
+            12.537552531015484
+          ],
+          [
+            "Ef_rel",
+            "T2_stone_wales",
+            4.293036057301429
+          ],
+          [
+            "Ef_rel",
+            "T3_dislocation_dipole",
+            0.49337766693431634
+          ],
+          [
+            "Ef_rel",
+            "T4_low_angle_gb",
+            0.48971182713727757
+          ],
+          [
+            "Ef_rel",
+            "T5_high_angle_gb",
+            0.4571062512554073
+          ],
+          [
+            "ring_l1_init",
+            "T1_vacancy",
+            0.8595736899943692
+          ],
+          [
+            "ring_l1_init",
+            "T2_stone_wales",
+            0.8548082220271352
+          ],
+          [
+            "ring_l1_init",
+            "T3_dislocation_dipole",
+            0.7917710875161172
+          ],
+          [
+            "ring_l1_init",
+            "T4_low_angle_gb",
+            0.8671784955011556
+          ],
+          [
+            "ring_l1_init",
+            "T5_high_angle_gb",
+            0.8298289491667309
+          ],
+          [
+            "l2_change",
+            "T1_vacancy",
+            0.37300314847230376
+          ],
+          [
+            "l2_change",
+            "T2_stone_wales",
+            0.6059034348610937
+          ],
+          [
+            "l2_change",
+            "T3_dislocation_dipole",
+            0.6070800936110466
+          ],
+          [
+            "l2_change",
+            "T4_low_angle_gb",
+            0.6135891767578368
+          ],
+          [
+            "l2_change",
+            "T5_high_angle_gb",
+            0.6325489053210117
+          ],
+          [
+            "roughness_init",
+            "T1_vacancy",
+            0.6565559696888942
+          ],
+          [
+            "roughness_init",
+            "T2_stone_wales",
+            0.9462972098193904
+          ],
+          [
+            "roughness_init",
+            "T3_dislocation_dipole",
+            0.9885646649027403
+          ],
+          [
+            "roughness_init",
+            "T4_low_angle_gb",
+            1.060446298584864
+          ],
+          [
+            "roughness_init",
+            "T5_high_angle_gb",
+            1.1955576320327261
+          ]
+        ],
+        "min_rank_corr": -0.45454545454545453,
+        "n_admissible": 66,
+        "n_total": 108,
+        "observables": [
+          "Ef_rel",
+          "ring_l1_init",
+          "l2_change",
+          "roughness_init"
+        ],
+        "outcome": "A: decision tree"
+      },
+      "variance_components": {
+        "Ef_rel": {
+          "total": 0.06813141499572456,
+          "sigma2_protocol": 0.010492855794332803,
+          "sigma2_case": 0.03511786932623435,
+          "sigma2_resid": 0.022520689875157405
+        },
+        "ring_l1_init": {
+          "total": 1.020226466937823,
+          "sigma2_protocol": 0.9550723126433499,
+          "sigma2_case": 0.019392061820599785,
+          "sigma2_resid": 0.045762092473873334
+        },
+        "l2_change": {
+          "total": 0.10682448071883081,
+          "sigma2_protocol": 0.08870211576578509,
+          "sigma2_case": 0.0042508657382138056,
+          "sigma2_resid": 0.013871499214831938
+        },
+        "roughness_init": {
+          "total": 482.4822987130378,
+          "sigma2_protocol": 401.3101135029446,
+          "sigma2_case": 16.66225268377029,
+          "sigma2_resid": 64.50993252632281
+        }
+      },
+      "protocol_cv_by_case": {
+        "Ef_rel": {
+          "T0_pristine": NaN,
+          "T1_vacancy": 12.537552531015484,
+          "T2_stone_wales": 4.293036057301429,
+          "T3_dislocation_dipole": 0.49337766693431634,
+          "T4_low_angle_gb": 0.48971182713727757,
+          "T5_high_angle_gb": 0.4571062512554073
+        },
+        "ring_l1_init": {
+          "T0_pristine": 0.8380286453475526,
+          "T1_vacancy": 0.8595736899943692,
+          "T2_stone_wales": 0.8548082220271352,
+          "T3_dislocation_dipole": 0.7917710875161172,
+          "T4_low_angle_gb": 0.8671784955011556,
+          "T5_high_angle_gb": 0.8298289491667309
+        },
+        "l2_change": {
+          "T0_pristine": 0.3785987442745831,
+          "T1_vacancy": 0.37300314847230376,
+          "T2_stone_wales": 0.6059034348610937,
+          "T3_dislocation_dipole": 0.6070800936110466,
+          "T4_low_angle_gb": 0.6135891767578368,
+          "T5_high_angle_gb": 0.6325489053210117
+        },
+        "roughness_init": {
+          "T0_pristine": 0.673031021113737,
+          "T1_vacancy": 0.6565559696888942,
+          "T2_stone_wales": 0.9462972098193904,
+          "T3_dislocation_dipole": 0.9885646649027403,
+          "T4_low_angle_gb": 1.060446298584864,
+          "T5_high_angle_gb": 1.1955576320327261
+        }
+      },
+      "n_admissible_protocols": 11
+    }
+  },
+  "lambda_robust": true
+}

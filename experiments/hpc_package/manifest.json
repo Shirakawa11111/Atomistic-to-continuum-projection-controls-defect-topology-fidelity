@@ -1,0 +1,123 @@
+{
+  "hpc": "nanolab2023 (ssh hpc, Tailscale)",
+  "lammps": "/usr/bin/lmp",
+  "potential": "CH.airebo",
+  "remote_root": "route_A_protocol_robustness",
+  "cases": [
+    {
+      "name": "T0_pristine",
+      "key": "T0",
+      "n_atoms": 1024,
+      "data": "cases/T0_pristine.data",
+      "minimize": "minimize_T0_pristine.in",
+      "md": "md_T0_pristine.in",
+      "relaxed_dump": "relaxed_T0_pristine.dump",
+      "relaxed_data": "relaxed_T0_pristine.data",
+      "md_dump": "md_T0_pristine_*.dump",
+      "defect_centers": [],
+      "description": "pristine honeycomb, 1024 atoms"
+    },
+    {
+      "name": "T1_vacancy",
+      "key": "T1",
+      "n_atoms": 1023,
+      "data": "cases/T1_vacancy.data",
+      "minimize": "minimize_T1_vacancy.in",
+      "md": "md_T1_vacancy.in",
+      "relaxed_dump": "relaxed_T1_vacancy.dump",
+      "relaxed_data": "relaxed_T1_vacancy.data",
+      "md_dump": "md_T1_vacancy_*.dump",
+      "defect_centers": [
+        [
+          34.08,
+          19.676097173982445
+        ]
+      ],
+      "description": "single vacancy, 1023 atoms"
+    },
+    {
+      "name": "T2_stone_wales",
+      "key": "T2",
+      "n_atoms": 1024,
+      "data": "cases/T2_stone_wales.data",
+      "minimize": "minimize_T2_stone_wales.in",
+      "md": "md_T2_stone_wales.in",
+      "relaxed_dump": "relaxed_T2_stone_wales.dump",
+      "relaxed_data": "relaxed_T2_stone_wales.data",
+      "md_dump": "md_T2_stone_wales_*.dump",
+      "defect_centers": [
+        [
+          33.724999999999994,
+          19.061219137295495
+        ]
+      ],
+      "description": "Stone\u2013Wales 5-7-7-5 (90\u00b0 bond rotation)"
+    },
+    {
+      "name": "T3_dislocation_dipole",
+      "key": "T3",
+      "n_atoms": 856,
+      "data": "cases/T3_dislocation_dipole.data",
+      "minimize": "minimize_T3_dislocation_dipole.in",
+      "md": "md_T3_dislocation_dipole.in",
+      "relaxed_dump": "relaxed_T3_dislocation_dipole.dump",
+      "relaxed_data": "relaxed_T3_dislocation_dipole.data",
+      "md_dump": "md_T3_dislocation_dipole_*.dump",
+      "defect_centers": [
+        [
+          29.819999999999997,
+          14.757072880486835
+        ],
+        [
+          46.86,
+          14.757072880486835
+        ]
+      ],
+      "description": "5-7 dislocation dipole (removed 8-atom segment; relax with LAMMPS)"
+    },
+    {
+      "name": "T4_low_angle_gb",
+      "key": "T4",
+      "n_atoms": 862,
+      "data": "cases/T4_low_angle_gb.data",
+      "minimize": "minimize_T4_low_angle_gb.in",
+      "md": "md_T4_low_angle_gb.in",
+      "relaxed_dump": "relaxed_T4_low_angle_gb.dump",
+      "relaxed_data": "relaxed_T4_low_angle_gb.data",
+      "md_dump": "md_T4_low_angle_gb_*.dump",
+      "defect_centers": [
+        [
+          38.339999999999996,
+          14.757072880486835
+        ],
+        [
+          0.0,
+          14.757072880486835
+        ]
+      ],
+      "description": "symmetric tilt GB \u03b8\u22485.0\u00b0 (nominal; relax with LAMMPS)"
+    },
+    {
+      "name": "T5_high_angle_gb",
+      "key": "T5",
+      "n_atoms": 861,
+      "data": "cases/T5_high_angle_gb.data",
+      "minimize": "minimize_T5_high_angle_gb.in",
+      "md": "md_T5_high_angle_gb.in",
+      "relaxed_dump": "relaxed_T5_high_angle_gb.dump",
+      "relaxed_data": "relaxed_T5_high_angle_gb.data",
+      "md_dump": "md_T5_high_angle_gb_*.dump",
+      "defect_centers": [
+        [
+          38.339999999999996,
+          14.757072880486835
+        ],
+        [
+          0.0,
+          14.757072880486835
+        ]
+      ],
+      "description": "symmetric tilt GB \u03b8\u224815.0\u00b0 (nominal; relax with LAMMPS)"
+    }
+  ]
+}

@@ -1,0 +1,289 @@
+{
+  "nx": 512,
+  "max_steps": 20000,
+  "lams": [
+    0.01,
+    0.0
+  ],
+  "n_rows": 216,
+  "relaxed": [
+    "T0_pristine",
+    "T1_vacancy",
+    "T2_stone_wales",
+    "T3_dislocation_dipole",
+    "T4_low_angle_gb",
+    "T5_high_angle_gb"
+  ],
+  "md_snapshots": {},
+  "per_lam": {
+    "0.01": {
+      "verdict": {
+        "D1_met": true,
+        "D2_met": true,
+        "D_met": true,
+        "max_cv": 4.1231056257234595,
+        "cv_threshold": 0.2,
+        "d1_hits": [
+          [
+            "Ef_rel",
+            "T1_vacancy",
+            2.0939535731127004
+          ],
+          [
+            "Ef_rel",
+            "T2_stone_wales",
+            4.123105619958453
+          ],
+          [
+            "Ef_rel",
+            "T3_dislocation_dipole",
+            4.123105625610268
+          ],
+          [
+            "Ef_rel",
+            "T4_low_angle_gb",
+            4.123105625662344
+          ],
+          [
+            "Ef_rel",
+            "T5_high_angle_gb",
+            4.1231056257234595
+          ],
+          [
+            "tau_57",
+            "T1_vacancy",
+            0.49932350124613695
+          ],
+          [
+            "tau_57",
+            "T2_stone_wales",
+            1.2306865184916502
+          ],
+          [
+            "tau_57",
+            "T3_dislocation_dipole",
+            1.7696664864098286
+          ],
+          [
+            "tau_57",
+            "T4_low_angle_gb",
+            2.472687882006599
+          ],
+          [
+            "tau_57",
+            "T5_high_angle_gb",
+            2.674868005581309
+          ],
+          [
+            "l2_change",
+            "T1_vacancy",
+            2.637642272067929
+          ],
+          [
+            "l2_change",
+            "T2_stone_wales",
+            4.099896855151718
+          ],
+          [
+            "l2_change",
+            "T3_dislocation_dipole",
+            4.103657028549293
+          ],
+          [
+            "l2_change",
+            "T4_low_angle_gb",
+            4.092138461626186
+          ],
+          [
+            "l2_change",
+            "T5_high_angle_gb",
+            4.08826289887777
+          ]
+        ],
+        "min_rank_corr": -0.39938080495356043,
+        "outcome": "A: decision tree"
+      },
+      "variance_components": {
+        "Ef_rel": {
+          "total": 6.863601317147254e+23,
+          "sigma2_protocol": 1.8982748235938377e+23,
+          "sigma2_case": 2.7585147187260287e+22,
+          "sigma2_resid": 4.689475021680814e+23
+        },
+        "tau_57": {
+          "total": 46.20085492459216,
+          "sigma2_protocol": 16.029890280342663,
+          "sigma2_case": 2.7062215751510403,
+          "sigma2_resid": 27.964069127742565
+        },
+        "l2_change": {
+          "total": 6031572262399.136,
+          "sigma2_protocol": 3666673654266.952,
+          "sigma2_case": 131473396806.49808,
+          "sigma2_resid": 2233425211325.684
+        }
+      },
+      "protocol_cv_by_case": {
+        "Ef_rel": {
+          "T0_pristine": NaN,
+          "T1_vacancy": 2.0939535731127004,
+          "T2_stone_wales": 4.123105619958453,
+          "T3_dislocation_dipole": 4.123105625610268,
+          "T4_low_angle_gb": 4.123105625662344,
+          "T5_high_angle_gb": 4.1231056257234595
+        },
+        "tau_57": {
+          "T0_pristine": 0.6030226891555273,
+          "T1_vacancy": 0.49932350124613695,
+          "T2_stone_wales": 1.2306865184916502,
+          "T3_dislocation_dipole": 1.7696664864098286,
+          "T4_low_angle_gb": 2.472687882006599,
+          "T5_high_angle_gb": 2.674868005581309
+        },
+        "l2_change": {
+          "T0_pristine": 2.5350706840170294,
+          "T1_vacancy": 2.637642272067929,
+          "T2_stone_wales": 4.099896855151718,
+          "T3_dislocation_dipole": 4.103657028549293,
+          "T4_low_angle_gb": 4.092138461626186,
+          "T5_high_angle_gb": 4.08826289887777
+        }
+      }
+    },
+    "0.0": {
+      "verdict": {
+        "D1_met": true,
+        "D2_met": true,
+        "D_met": true,
+        "max_cv": 4.123105625723725,
+        "cv_threshold": 0.2,
+        "d1_hits": [
+          [
+            "Ef_rel",
+            "T1_vacancy",
+            2.1452252343752187
+          ],
+          [
+            "Ef_rel",
+            "T2_stone_wales",
+            4.12310561995842
+          ],
+          [
+            "Ef_rel",
+            "T3_dislocation_dipole",
+            4.123105625610277
+          ],
+          [
+            "Ef_rel",
+            "T4_low_angle_gb",
+            4.123105625662563
+          ],
+          [
+            "Ef_rel",
+            "T5_high_angle_gb",
+            4.123105625723725
+          ],
+          [
+            "tau_57",
+            "T1_vacancy",
+            0.549169647365276
+          ],
+          [
+            "tau_57",
+            "T2_stone_wales",
+            1.6599789215858027
+          ],
+          [
+            "tau_57",
+            "T3_dislocation_dipole",
+            1.7696664864098286
+          ],
+          [
+            "tau_57",
+            "T4_low_angle_gb",
+            2.7120231055789352
+          ],
+          [
+            "tau_57",
+            "T5_high_angle_gb",
+            2.7355632745272596
+          ],
+          [
+            "l2_change",
+            "T1_vacancy",
+            2.63764132834834
+          ],
+          [
+            "l2_change",
+            "T2_stone_wales",
+            4.099896845134307
+          ],
+          [
+            "l2_change",
+            "T3_dislocation_dipole",
+            4.103657020068351
+          ],
+          [
+            "l2_change",
+            "T4_low_angle_gb",
+            4.092138447477093
+          ],
+          [
+            "l2_change",
+            "T5_high_angle_gb",
+            4.0882628840966
+          ]
+        ],
+        "min_rank_corr": -0.391124871001032,
+        "outcome": "A: decision tree"
+      },
+      "variance_components": {
+        "Ef_rel": {
+          "total": 6.863601317147254e+23,
+          "sigma2_protocol": 1.8982748235938377e+23,
+          "sigma2_case": 2.758514718726013e+22,
+          "sigma2_resid": 4.6894750216808165e+23
+        },
+        "tau_57": {
+          "total": 45.946383214879916,
+          "sigma2_protocol": 16.07123504261911,
+          "sigma2_case": 2.639590877381648,
+          "sigma2_resid": 27.70606121829901
+        },
+        "l2_change": {
+          "total": 6031572260505.056,
+          "sigma2_protocol": 3666673652372.8745,
+          "sigma2_case": 131473396617.8334,
+          "sigma2_resid": 2233425211514.349
+        }
+      },
+      "protocol_cv_by_case": {
+        "Ef_rel": {
+          "T0_pristine": NaN,
+          "T1_vacancy": 2.1452252343752187,
+          "T2_stone_wales": 4.12310561995842,
+          "T3_dislocation_dipole": 4.123105625610277,
+          "T4_low_angle_gb": 4.123105625662563,
+          "T5_high_angle_gb": 4.123105625723725
+        },
+        "tau_57": {
+          "T0_pristine": 0.5773502691896257,
+          "T1_vacancy": 0.549169647365276,
+          "T2_stone_wales": 1.6599789215858027,
+          "T3_dislocation_dipole": 1.7696664864098286,
+          "T4_low_angle_gb": 2.7120231055789352,
+          "T5_high_angle_gb": 2.7355632745272596
+        },
+        "l2_change": {
+          "T0_pristine": 2.5350697555666346,
+          "T1_vacancy": 2.63764132834834,
+          "T2_stone_wales": 4.099896845134307,
+          "T3_dislocation_dipole": 4.103657020068351,
+          "T4_low_angle_gb": 4.092138447477093,
+          "T5_high_angle_gb": 4.0882628840966
+        }
+      }
+    }
+  },
+  "lambda_robust": true
+}

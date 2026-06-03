@@ -1,0 +1,28 @@
+# 2D LJ triangular lattice — TR2_divacancy
+units           lj
+dimension       2
+boundary        p p p
+atom_style      atomic
+lattice         hex 0.9
+region          box block 0 26 0 30 -0.25 0.25
+create_box      1 box
+create_atoms    1 box
+mass            1 1.0
+pair_style      lj/cut 2.5
+pair_coeff      1 1 1.0 1.0 2.5
+
+variable cx equal 0.5*(xlo+xhi)
+variable cy equal 0.5*(ylo+yhi)
+region hole sphere ${cx} ${cy} 0.0 0.75 units box
+delete_atoms region hole compress yes
+
+# relax: atoms, then box+atoms, then atoms (cg throughout; 2D)
+fix             enf2d all enforce2d
+min_style       cg
+minimize        1e-12 1e-12 20000 200000
+fix             rbox all box/relax x 0.0 y 0.0
+minimize        1e-12 1e-12 20000 200000
+unfix           rbox
+minimize        1e-12 1e-12 20000 200000
+write_dump      all custom /Users/bojingkai/Desktop/Route_A_protocol_robustness/experiments/triangular/relaxed_TR2_divacancy.dump id type x y z modify sort id
+print           "DONE TR2_divacancy natoms $(count(all))"

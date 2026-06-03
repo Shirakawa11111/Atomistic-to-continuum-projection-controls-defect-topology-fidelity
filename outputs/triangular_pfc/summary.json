@@ -1,0 +1,32 @@
+{
+  "per_case": {
+    "TR0_pristine": {
+      "good_max": 3.747,
+      "bad_min": 3.141,
+      "clean": false,
+      "gap": 0.8
+    },
+    "TR1_vacancy": {
+      "good_max": 3.6,
+      "bad_min": 2.638,
+      "clean": false,
+      "gap": 0.7
+    },
+    "TR2_void": {
+      "good_max": 3.3,
+      "bad_min": 2.477,
+      "clean": false,
+      "gap": 0.8
+    },
+    "TR3_interstitial": {
+      "good_max": 3.474,
+      "bad_min": 2.022,
+      "clean": false,
+      "gap": 0.6
+    }
+  },
+  "n_clean": 0,
+  "n_cases": 4,
+  "worst_gap": null,
+  "worst_gap_defects": 0.6
+}

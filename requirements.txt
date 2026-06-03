@@ -1,0 +1,9 @@
+# Python dependencies for the atoms-to-continuum projection benchmark.
+# Tested with Python 3.10+.
+numpy>=1.24
+scipy>=1.10
+pandas>=1.5
+matplotlib>=3.6
+statsmodels>=0.14   # optional: noise-corrected random-effects UQ (scripts/uq_analysis.py)
+# LAMMPS (any recent build with the MANYBODY package: AIREBO, Tersoff; and lj/cut)
+# is required only to regenerate the relaxed atomic structures in experiments/.

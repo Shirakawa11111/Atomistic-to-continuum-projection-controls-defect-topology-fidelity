@@ -1,0 +1,58 @@
+{
+  "structural_honeycomb_ringL1_relaxed_lam0": {
+    "n_cases": 5,
+    "n_protocols": 5,
+    "cases": [
+      "T1_vacancy",
+      "T2_stone_wales",
+      "T3_dislocation_dipole",
+      "T4_low_angle_gb",
+      "T5_high_angle_gb"
+    ],
+    "protocols": [
+      "K1/R2/P3",
+      "K2/R2/P3",
+      "K3/R2/P3",
+      "K3/R2/P4",
+      "K4/R2/P3"
+    ],
+    "point_ratio": 24.53232533205317,
+    "sigma2_protocol": 0.6348346937490581,
+    "sigma2_case": 0.02587747737551821,
+    "boot_case_lo": 17.484134343451252,
+    "boot_case_hi": 185.13144028733134,
+    "boot_case_median": 34.165371394724566,
+    "boot_case_P_gt_10": 1.0,
+    "boot_case_frac_inf": 0.0014,
+    "noise_corrected_ratio": Infinity,
+    "s2_protocol_nc": 0.75877441692003,
+    "s2_case_nc": 0.0
+  },
+  "triangular_coordL1_relaxed_lam0": {
+    "n_cases": 3,
+    "n_protocols": 5,
+    "cases": [
+      "TR1_vacancy",
+      "TR2_void",
+      "TR3_interstitial"
+    ],
+    "protocols": [
+      "K1/R2/P3",
+      "K2/R2/P3",
+      "K3/R2/P3",
+      "K3/R2/P4",
+      "K4/R2/P3"
+    ],
+    "point_ratio": 3336.2677744338243,
+    "sigma2_protocol": 0.2943116815710999,
+    "sigma2_case": 8.821584521075967e-05,
+    "boot_case_lo": 2880.7101742334594,
+    "boot_case_hi": "inf",
+    "boot_case_median": 3336.2677744338253,
+    "boot_case_P_gt_10": 1.0,
+    "boot_case_frac_inf": 0.1044,
+    "noise_corrected_ratio": 4588.807848360426,
+    "s2_protocol_nc": 0.36780264920730454,
+    "s2_case_nc": 8.015211387391605e-05
+  }
+}

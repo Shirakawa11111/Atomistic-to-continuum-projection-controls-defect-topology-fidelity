@@ -1,0 +1,377 @@
+{
+  "n_rows": 210,
+  "configs": [
+    "base",
+    "h1_0.95",
+    "h1_1.15",
+    "h2_0.40",
+    "h2_0.80",
+    "w_0.07",
+    "w_0.13"
+  ],
+  "per_config": {
+    "base": {
+      "n_cases": 6,
+      "n_clean": 6,
+      "min_gap": 19.8,
+      "median_gap": 31.8,
+      "n_unhealthy": 0,
+      "cells": [
+        {
+          "case": "T0",
+          "good_max": 0.022,
+          "bad_min": 0.818,
+          "clean": true,
+          "gap": 36.4
+        },
+        {
+          "case": "T1",
+          "good_max": 0.026,
+          "bad_min": 0.713,
+          "clean": true,
+          "gap": 27.1
+        },
+        {
+          "case": "T2",
+          "good_max": 0.042,
+          "bad_min": 0.84,
+          "clean": true,
+          "gap": 19.8
+        },
+        {
+          "case": "T3",
+          "good_max": 0.031,
+          "bad_min": 1.921,
+          "clean": true,
+          "gap": 62.2
+        },
+        {
+          "case": "T4",
+          "good_max": 0.022,
+          "bad_min": 1.251,
+          "clean": true,
+          "gap": 56.0
+        },
+        {
+          "case": "T5",
+          "good_max": 0.056,
+          "bad_min": 1.484,
+          "clean": true,
+          "gap": 26.4
+        }
+      ]
+    },
+    "h1_0.95": {
+      "n_cases": 6,
+      "n_clean": 6,
+      "min_gap": 19.7,
+      "median_gap": 37.7,
+      "n_unhealthy": 0,
+      "cells": [
+        {
+          "case": "T0",
+          "good_max": 0.013,
+          "bad_min": 0.84,
+          "clean": true,
+          "gap": 62.3
+        },
+        {
+          "case": "T1",
+          "good_max": 0.02,
+          "bad_min": 0.719,
+          "clean": true,
+          "gap": 36.4
+        },
+        {
+          "case": "T2",
+          "good_max": 0.053,
+          "bad_min": 1.403,
+          "clean": true,
+          "gap": 26.2
+        },
+        {
+          "case": "T3",
+          "good_max": 0.031,
+          "bad_min": 1.708,
+          "clean": true,
+          "gap": 55.3
+        },
+        {
+          "case": "T4",
+          "good_max": 0.031,
+          "bad_min": 1.198,
+          "clean": true,
+          "gap": 39.0
+        },
+        {
+          "case": "T5",
+          "good_max": 0.072,
+          "bad_min": 1.42,
+          "clean": true,
+          "gap": 19.7
+        }
+      ]
+    },
+    "h1_1.15": {
+      "n_cases": 6,
+      "n_clean": 6,
+      "min_gap": 18.9,
+      "median_gap": 36.5,
+      "n_unhealthy": 0,
+      "cells": [
+        {
+          "case": "T0",
+          "good_max": 0.016,
+          "bad_min": 0.809,
+          "clean": true,
+          "gap": 51.4
+        },
+        {
+          "case": "T1",
+          "good_max": 0.037,
+          "bad_min": 0.706,
+          "clean": true,
+          "gap": 18.9
+        },
+        {
+          "case": "T2",
+          "good_max": 0.031,
+          "bad_min": 0.824,
+          "clean": true,
+          "gap": 26.4
+        },
+        {
+          "case": "T3",
+          "good_max": 0.039,
+          "bad_min": 1.896,
+          "clean": true,
+          "gap": 48.2
+        },
+        {
+          "case": "T4",
+          "good_max": 0.028,
+          "bad_min": 1.302,
+          "clean": true,
+          "gap": 46.6
+        },
+        {
+          "case": "T5",
+          "good_max": 0.07,
+          "bad_min": 1.508,
+          "clean": true,
+          "gap": 21.7
+        }
+      ]
+    },
+    "h2_0.40": {
+      "n_cases": 6,
+      "n_clean": 6,
+      "min_gap": 21.0,
+      "median_gap": 37.9,
+      "n_unhealthy": 0,
+      "cells": [
+        {
+          "case": "T0",
+          "good_max": 0.027,
+          "bad_min": 0.854,
+          "clean": true,
+          "gap": 31.7
+        },
+        {
+          "case": "T1",
+          "good_max": 0.026,
+          "bad_min": 0.719,
+          "clean": true,
+          "gap": 27.3
+        },
+        {
+          "case": "T2",
+          "good_max": 0.02,
+          "bad_min": 1.385,
+          "clean": true,
+          "gap": 69.1
+        },
+        {
+          "case": "T3",
+          "good_max": 0.037,
+          "bad_min": 2.463,
+          "clean": true,
+          "gap": 67.5
+        },
+        {
+          "case": "T4",
+          "good_max": 0.028,
+          "bad_min": 1.232,
+          "clean": true,
+          "gap": 44.1
+        },
+        {
+          "case": "T5",
+          "good_max": 0.07,
+          "bad_min": 1.457,
+          "clean": true,
+          "gap": 21.0
+        }
+      ]
+    },
+    "h2_0.80": {
+      "n_cases": 6,
+      "n_clean": 6,
+      "min_gap": 20.5,
+      "median_gap": 29.0,
+      "n_unhealthy": 0,
+      "cells": [
+        {
+          "case": "T0",
+          "good_max": 0.027,
+          "bad_min": 0.802,
+          "clean": true,
+          "gap": 29.8
+        },
+        {
+          "case": "T1",
+          "good_max": 0.02,
+          "bad_min": 0.704,
+          "clean": true,
+          "gap": 35.7
+        },
+        {
+          "case": "T2",
+          "good_max": 0.029,
+          "bad_min": 0.815,
+          "clean": true,
+          "gap": 28.2
+        },
+        {
+          "case": "T3",
+          "good_max": 0.062,
+          "bad_min": 1.267,
+          "clean": true,
+          "gap": 20.5
+        },
+        {
+          "case": "T4",
+          "good_max": 0.031,
+          "bad_min": 1.215,
+          "clean": true,
+          "gap": 39.5
+        },
+        {
+          "case": "T5",
+          "good_max": 0.061,
+          "bad_min": 1.503,
+          "clean": true,
+          "gap": 24.4
+        }
+      ]
+    },
+    "w_0.07": {
+      "n_cases": 6,
+      "n_clean": 6,
+      "min_gap": 20.6,
+      "median_gap": 36.6,
+      "n_unhealthy": 0,
+      "cells": [
+        {
+          "case": "T0",
+          "good_max": 0.018,
+          "bad_min": 0.856,
+          "clean": true,
+          "gap": 47.6
+        },
+        {
+          "case": "T1",
+          "good_max": 0.029,
+          "bad_min": 0.732,
+          "clean": true,
+          "gap": 25.7
+        },
+        {
+          "case": "T2",
+          "good_max": 0.016,
+          "bad_min": 0.967,
+          "clean": true,
+          "gap": 62.0
+        },
+        {
+          "case": "T3",
+          "good_max": 0.039,
+          "bad_min": 2.539,
+          "clean": true,
+          "gap": 64.6
+        },
+        {
+          "case": "T4",
+          "good_max": 0.064,
+          "bad_min": 1.321,
+          "clean": true,
+          "gap": 20.6
+        },
+        {
+          "case": "T5",
+          "good_max": 0.064,
+          "bad_min": 1.473,
+          "clean": true,
+          "gap": 23.0
+        }
+      ]
+    },
+    "w_0.13": {
+      "n_cases": 6,
+      "n_clean": 6,
+      "min_gap": 12.9,
+      "median_gap": 26.9,
+      "n_unhealthy": 0,
+      "cells": [
+        {
+          "case": "T0",
+          "good_max": 0.022,
+          "bad_min": 0.813,
+          "clean": true,
+          "gap": 36.2
+        },
+        {
+          "case": "T1",
+          "good_max": 0.055,
+          "bad_min": 0.708,
+          "clean": true,
+          "gap": 12.9
+        },
+        {
+          "case": "T2",
+          "good_max": 0.038,
+          "bad_min": 0.826,
+          "clean": true,
+          "gap": 21.8
+        },
+        {
+          "case": "T3",
+          "good_max": 0.028,
+          "bad_min": 1.744,
+          "clean": true,
+          "gap": 62.1
+        },
+        {
+          "case": "T4",
+          "good_max": 0.039,
+          "bad_min": 1.246,
+          "clean": true,
+          "gap": 31.9
+        },
+        {
+          "case": "T5",
+          "good_max": 0.075,
+          "bad_min": 1.42,
+          "clean": true,
+          "gap": 19.0
+        }
+      ]
+    }
+  },
+  "overall": {
+    "n_cells": 42,
+    "n_clean": 42,
+    "clean_fraction": 1.0,
+    "worst_gap": 12.9
+  }
+}
