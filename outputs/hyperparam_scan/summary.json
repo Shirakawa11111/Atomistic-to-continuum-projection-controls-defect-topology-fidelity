@@ -1,0 +1,98 @@
+{
+  "description": "Best-achievable INITIALISATION ring-L1 per kernel family (model-independent; min over the swept hyperparameter of the mean-over-six-defects ring-L1). Lower = better topology fidelity.",
+  "n_cases": 6,
+  "sigma_band": [
+    0.002,
+    0.003,
+    0.004,
+    0.005,
+    0.006,
+    0.008,
+    0.01,
+    0.015,
+    0.02,
+    0.03,
+    0.05
+  ],
+  "k1_band_kcut": [
+    500.0,
+    333.0,
+    250.0,
+    200.0,
+    167.0,
+    125.0,
+    100.0,
+    67.0,
+    50.0,
+    33.0,
+    20.0
+  ],
+  "median_atomic_k": 325.5,
+  "best_band": {
+    "K1": {
+      "value": 500.0,
+      "sigma_equiv": 0.002,
+      "best_mean_ringL1": 0.0212,
+      "worst_case_ringL1": 0.0401
+    },
+    "K2": {
+      "value": 0.004,
+      "sigma_equiv": 0.004,
+      "best_mean_ringL1": 0.0155,
+      "worst_case_ringL1": 0.0334
+    },
+    "K3": {
+      "value": 0.005,
+      "sigma_equiv": 0.005,
+      "best_mean_ringL1": 0.0209,
+      "worst_case_ringL1": 0.0379
+    },
+    "K4": {
+      "value": 0.05,
+      "sigma_equiv": 0.05,
+      "best_mean_ringL1": 1.0004,
+      "worst_case_ringL1": 1.0022
+    }
+  },
+  "best_wide": {
+    "K1": {
+      "value": 470.0,
+      "sigma_equiv": 0.00213,
+      "best_mean_ringL1": 0.018,
+      "worst_case_ringL1": 0.0348
+    },
+    "K2": {
+      "value": 0.004,
+      "sigma_equiv": 0.004,
+      "best_mean_ringL1": 0.0155,
+      "worst_case_ringL1": 0.0334
+    },
+    "K3": {
+      "value": 0.005,
+      "sigma_equiv": 0.005,
+      "best_mean_ringL1": 0.0209,
+      "worst_case_ringL1": 0.0379
+    },
+    "K4": {
+      "value": 0.05,
+      "sigma_equiv": 0.05,
+      "best_mean_ringL1": 1.0004,
+      "worst_case_ringL1": 1.0022
+    }
+  },
+  "worst_good_band_K2K3": 1.3251,
+  "best_bad_band_K1K4": 0.0212,
+  "intrinsic_failure_band": false,
+  "k1_resonance": {
+    "note": "K1's low-ring-L1 only appears in a narrow high-cutoff window where it degenerates to band-limited Dirac deposition (k_cut >> atomic |G1|, ~10% of modes passed); it is a fragile, non-monotonic resonance.",
+    "wide_opt_kcut": 470.0,
+    "wide_opt_mean_ringL1": 0.018,
+    "wide_opt_sigma_equiv": 0.00213,
+    "contiguous_good_window_kcut": [
+      460.0,
+      530.0
+    ],
+    "window_width_kcut": 70.0
+  },
+  "verdict": "NOT CLEAN within band: re-examine."
+}

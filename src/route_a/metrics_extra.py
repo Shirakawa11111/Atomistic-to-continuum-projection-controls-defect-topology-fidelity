@@ -225,6 +225,73 @@ def ring_l1_delaunay_vs_truth(
 
 
 # --------------------------------------------------------------------------
+# (a') CORRECTED PRIMARY ring detector: bond-graph planar-face enumeration
+# --------------------------------------------------------------------------
+def ring_histogram_bondgraph(points, bond_cutoff=None, max_ring: int = 12):
+    """Ring histogram = bounded-face sizes of the self-calibrated bond graph's
+    planar embedding. This is the trustworthy primary detector: unlike the
+    shortest-cycle (SSSR) detector — which can MISS a heptagon when two large
+    rings share an edge (e.g. one of the two Stone--Wales heptagons) — and unlike
+    the pruned-Delaunay detector — whose area-outlier filter can delete large
+    interior rings — this enumerates every bounded face and removes ONLY the outer
+    face by orientation sign (no area-magnitude cut), so it recovers the full
+    Stone--Wales 5-7-7-5 core ($n_5=2,\\,n_7=2$). For a 2D bonded sheet the bounded
+    faces are exactly the rings. Same 1.4x-median bond convention as the others.
+    """
+    pts = _xy(points)
+    if len(pts) < 3:
+        return {}
+    if bond_cutoff is None:
+        bond_cutoff = self_bond_cutoff(pts)
+    if bond_cutoff <= 0:
+        return {}
+    adj = [set() for _ in range(len(pts))]
+    for i, j in cKDTree(pts).query_pairs(bond_cutoff):
+        adj[i].add(j)
+        adj[j].add(i)
+    nb = {}
+    for u in range(len(pts)):
+        vs = list(adj[u])
+        vs.sort(key=lambda v: np.arctan2(pts[v, 1] - pts[u, 1], pts[v, 0] - pts[u, 0]))
+        nb[u] = vs
+
+    def _next(u, v):
+        ring = nb[v]
+        iu = ring.index(u)
+        return v, ring[(iu - 1) % len(ring)]
+
+    visited = set()
+    faces = []
+    for u0 in range(len(pts)):
+        for v0 in adj[u0]:
+            if (u0, v0) in visited:
+                continue
+            face = []
+            cu, cv = u0, v0
+            ok = True
+            for _ in range(max_ring + 2):
+                visited.add((cu, cv))
+                face.append(cu)
+                cu, cv = _next(cu, cv)
+                if (cu, cv) == (u0, v0):
+                    break
+            else:
+                ok = False  # longer than max_ring -> outer boundary, drop
+            if ok and 3 <= len(face) <= max_ring:
+                faces.append(face)
+    if not faces:
+        return {}
+    areas = np.array([_signed_area2(pts[f]) for f in faces])
+    interior_sign = np.sign(np.median(areas)) or 1.0
+    hist = {}
+    for f, ar in zip(faces, areas):
+        if np.sign(ar) != interior_sign:
+            continue  # outer face -- the ONLY rejection
+        hist[len(f)] = hist.get(len(f), 0) + 1
+    return hist
+
+
+# --------------------------------------------------------------------------
 # (b) NON-ring geometry fidelity vs ground-truth atoms
 # --------------------------------------------------------------------------
 def _coordination(points: np.ndarray, bond_cutoff: float) -> np.ndarray:

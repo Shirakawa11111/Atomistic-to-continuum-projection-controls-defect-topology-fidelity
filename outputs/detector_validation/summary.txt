@@ -1,0 +1,52 @@
+RING-DETECTOR TRUSTWORTHINESS AUDIT (T0-T5, AIREBO-relaxed)
+============================================================
+
+DECISIVE TEST -- Stone--Wales core (realized core = n5=2, n7=2, exact):
+  shortest-cycle (SSSR)  : n5=2, n7=1  -> FAIL (miscounts 1 of 2 heptagons)
+  Delaunay face (shipped): n5=2, n7=0  -> FAIL (area filter drops BOTH heptagons)
+  bond-graph face (truth): n5=2, n7=2  -> PASS
+
+Diagnosis:
+  * SSSR under-counts the SW heptagons because the two 7-rings share the
+    rotated bond; a shorter cycle through the adjacent pentagon substitutes
+    for one heptagon under the shortest-cycle-per-edge rule. Raising max_ring
+    does NOT fix it (structural, not a depth limit).
+  * The shipped Delaunay detector's raw half-edge walk DOES find both
+    heptagons, but a MAD-based area-outlier filter (meant for the outer face)
+    rejects the larger-area heptagons when the hexagons are near-identical
+    (tiny MAD -> over-tight threshold); it also deletes ~24 hexagons.
+  * The bond-graph planar-face detector enumerates the bonded network's
+    bounded faces directly (faces == rings) and drops ONLY the outer face by
+    orientation sign -> recovers the exact 5-7-7-5 core.
+
+Other cases:
+  * T0 pristine / T1 vacancy: realized core has no 5-/7-ring pair (T1 relaxes
+    to a symmetric OPEN vacancy: one large ring + 3 two-coordinated atoms),
+    and all three detectors agree (n5/n7 = 0/0).
+  * T3 dipole / T4,T5 tilt-GBs: the relaxed cores are NOT clean isolated 5-7
+    patterns at the 1.4x-median bond cutoff (under-coordinated atoms / mixed
+    large rings; cutoff-sensitive). All detectors agree on n5/n7 there, so
+    they do not discriminate -- the verdict rests on the SW case (T2).
+  * n6 differs across detectors only at the periodic/open boundary (the dump
+    is PBC but the detectors run on open coords); it does not touch the 5-/7
+    signal.
+
+K3 (Voronoi--Gaussian) RECONSTRUCTION of the SW defect (same verdict holds):
+  shortest-cycle  : n5/n7 = 2/1  (still misses a heptagon)
+  Delaunay        : n5/n7 = 2/0  (still misses both)
+  bond-graph      : n5/n7 = 2/2  (recovers 5-7-7-5)
+  -> the mapping itself preserves the SW topology; the discrepancy is the
+     DETECTOR, not the K3 reconstruction.
+
+RECOMMENDATION:
+  PRIMARY metric  = bond-graph planar-face ring histogram (the only detector
+                    that reproduces the textbook SW 5-7-7-5 core, on both the
+                    relaxed atoms and the K3 reconstruction).
+  SI cross-check  = shortest-cycle (SSSR); explicitly note its SW heptagon
+                    under-count so the cross-check is not over-claimed.
+  Also fix/flag   = the Delaunay area-outlier filter (drop the magnitude cut;
+                    keep only the orientation-sign rejection of the outer
+                    face) before using it even as a cross-check.
+
+Full per-case + K3 histograms (columns *_k3):
+  outputs/detector_validation/detector_validation.csv

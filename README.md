@@ -13,19 +13,24 @@ structure the continuum model predicts**.
 
 ## Key results
 
-- **A two-tier projection rule.** Holding the continuum model fixed and varying only the
-  projection (smoothing kernel × post-processing), a localized Gaussian kernel with amplitude
-  rescaling reproduces graphene defect topology an *order of magnitude* more faithfully than a
-  spectral or a cell-indicator kernel.
-- **Basin selection (the physics).** In a properly scaled structural PFC that genuinely
-  crystallizes the honeycomb, the projection selects which crystalline minimum the conserved
-  dynamics relaxes into: faithful projections recover the correct 5–7 defect cores, while poor
-  ones fall into a distinct structure the dynamics cannot repair.
-- **Robustness.** The ranking holds across two topology detectors (shortest-cycle and an
-  independent Delaunay traversal), two interatomic potentials (AIREBO and Tersoff), a
-  one-at-a-time scan of the structural-PFC parameters, and two lattices (honeycomb and a
-  triangular Lennard-Jones crystal), and the protocol-vs-case variance dominance persists on the
-  constraint-free structural PFC.
+- **Basin selection (the physics).** In a structural PFC that genuinely crystallizes graphene's
+  honeycomb, the atoms-to-field projection selects which crystalline minimum the conserved dynamics
+  relaxes into: a faithful projection recovers the correct 5–7 defect cores, while an unfaithful one
+  falls into a distinct structure the dynamics cannot repair.
+- **Three requirements for a faithful projection.** Sweeping each kernel's parameters shows a
+  faithful projection must (i) be amplitude-normalized (model stability), (ii) keep spectral content
+  up to the lattice's first reciprocal vector |G₁|, and (iii) place density at the atoms rather than
+  on cell plateaus. A **localized Gaussian** kernel meets all three over a wide parameter band and is
+  the safe default.
+- **Two diagnosable failures.** A piecewise-constant **cell-indicator** kernel places density on
+  Voronoi-cell plateaus and fails *intrinsically* (no width recovers the lattice). A **spectral**
+  low-pass kernel fails only when its cutoff falls below |G₁| — which it does at the natural cutoff
+  for the honeycomb but not for the coarser triangular lattice — recovering the correct basin only in
+  a fragile high-cutoff resonance.
+- **Numerically sound.** The structural-PFC relaxation has monotone free-energy descent, is grid- and
+  time-step-converged, and the selected basin is stable under perturbation. The basin assignment is
+  invariant to the topology detector (a bond-graph face detector that recovers the Stone–Wales core),
+  the interatomic potential (AIREBO and Tersoff), and the structural-PFC parameters.
 
 ## Repository layout
 

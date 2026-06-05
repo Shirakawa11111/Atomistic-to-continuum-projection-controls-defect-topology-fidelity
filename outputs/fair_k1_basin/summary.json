@@ -1,0 +1,57 @@
+{
+  "K1@200_default": {
+    "per_case_relaxed": [
+      0.8208,
+      0.7149,
+      0.8425,
+      1.7043,
+      2.244,
+      1.8932
+    ],
+    "mean_defects_relaxed": 1.4798
+  },
+  "K1@470_fair": {
+    "per_case_relaxed": [
+      0.0332,
+      0.041,
+      0.0416,
+      0.0806,
+      0.0134,
+      0.0755
+    ],
+    "mean_defects_relaxed": 0.0504
+  },
+  "K2": {
+    "per_case_relaxed": [
+      0.0,
+      0.0,
+      0.0066,
+      0.0215,
+      0.0322,
+      0.0573
+    ],
+    "mean_defects_relaxed": 0.0235
+  },
+  "K3": {
+    "per_case_relaxed": [
+      0.0265,
+      0.0065,
+      0.0263,
+      0.0081,
+      0.0349,
+      0.0625
+    ],
+    "mean_defects_relaxed": 0.0277
+  },
+  "K4": {
+    "per_case_relaxed": [
+      1.7478,
+      1.7127,
+      1.523,
+      2.672,
+      1.244,
+      1.4688
+    ],
+    "mean_defects_relaxed": 1.7241
+  }
+}

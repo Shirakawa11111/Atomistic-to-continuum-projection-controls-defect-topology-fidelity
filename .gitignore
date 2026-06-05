@@ -28,3 +28,10 @@ DECISIONS.md
 CONTINUATION.md
 docs/
 paper/
+
+# concurrent-session / build junk (not part of the release)
+node_modules/
+package.json
+package-lock.json
+outputs/graphical_abstract/
+outputs/manual-*/
