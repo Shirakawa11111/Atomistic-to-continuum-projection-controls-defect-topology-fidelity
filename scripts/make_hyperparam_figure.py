@@ -66,7 +66,7 @@ def main():
     k1_opt = summ["k1_resonance"]
     k4_floor = best["K4"]
 
-    fig, (axA, axB) = plt.subplots(1, 2, figsize=(COLF, 2.95),
+    fig, (axA, axB) = plt.subplots(1, 2, figsize=(COLF, 3.25),
                                    gridspec_kw=dict(width_ratios=[1.0, 1.35]))
 
     # ---- (a) best-achievable ring-L1 per family (bars, log-y) ----
@@ -112,15 +112,15 @@ def main():
     axB.axhspan(FLOOR * 0.8, 0.1, color=C["green"], alpha=0.05, zorder=0)
     axB.text(0.03, 0.965, "(b) full hyperparameter sweep",
              transform=axB.transAxes, fontsize=8.3, va="top")
-    axB.text(0.965, 0.60, "$K_4$ ceiling $\\approx$ 1\n($K_1$ low only in a\nfragile resonance)",
-             transform=axB.transAxes, fontsize=6.6, ha="right", va="center",
-             color=C["dark"])
-    axB.legend(loc="lower center", ncol=4, columnspacing=0.8, handletextpad=0.3,
-               fontsize=6.8, bbox_to_anchor=(0.5, -0.015))
+    axB.text(0.96, 0.90, "$K_4$ ceiling $\\approx$ 1", transform=axB.transAxes,
+             fontsize=7.0, ha="right", va="center", color=C["purple"])
+    axB.text(0.96, 0.30, "$K_1$ low only in a\nfragile resonance", transform=axB.transAxes,
+             fontsize=7.0, ha="right", va="center", color=C["red"])
 
-    fig.suptitle("Best-achievable mapping fidelity by kernel family "
-                 "($K_4$ floored at $\\approx$1; $K_1$ only a fragile resonance)",
-                 fontsize=8.8, y=1.06)
+    # shared family legend at the top (frees panel (b) of its crowded bottom legend)
+    h, l = axB.get_legend_handles_labels()
+    fig.legend(h, l, loc="upper center", ncol=4, columnspacing=1.3, handletextpad=0.4,
+               fontsize=8.2, frameon=False, bbox_to_anchor=(0.5, 1.05))
     fig.savefig(os.path.join(OUT, "F10_hyperparam.png"))
     plt.close(fig)
     print("wrote", os.path.join(OUT, "F10_hyperparam.png"))

@@ -63,7 +63,7 @@ def main():
     ax.set_xticklabels([CASE_LAB[c] for c in CASE_ORDER])
     ax.set_ylim(-0.08, 2.85)
     ax.set_ylabel("relaxed ring-L1  (lower = correct)")
-    ax.text(0.015, 0.085, "correct 5--7 basin", transform=ax.transAxes, fontsize=7.5,
+    ax.text(0.015, 0.085, "correct atomistic topology", transform=ax.transAxes, fontsize=7.5,
             color=C["green"], va="center")
     ax.text(0.015, 0.62, "distinct, unrepaired basin", transform=ax.transAxes, fontsize=7.5,
             color=C["red"], va="center")
