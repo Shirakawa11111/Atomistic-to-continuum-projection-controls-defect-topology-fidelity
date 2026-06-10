@@ -107,8 +107,8 @@ def main():
     # atomic |G1| -> sigma_atom = 1/k_atom: below this K1 cannot represent atoms
     sig_atom = 1.0 / k_atom
     axB.axvline(sig_atom, color=C["dark"], ls=(0, (4, 3)), lw=0.8, zorder=1)
-    axB.text(sig_atom * 0.92, 2.6, "$\\sigma{=}1/|G_1|$", rotation=90,
-             fontsize=6.6, ha="right", va="center", color=C["dark"])
+    axB.text(sig_atom * 1.16, 0.013, "$\\sigma{=}1/|G_1|$", rotation=90,
+             fontsize=6.6, ha="left", va="bottom", color=C["dark"])
     axB.axhspan(FLOOR * 0.8, 0.1, color=C["green"], alpha=0.05, zorder=0)
     axB.text(0.03, 0.965, "(b) full hyperparameter sweep",
              transform=axB.transAxes, fontsize=8.3, va="top")
