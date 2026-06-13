@@ -88,11 +88,20 @@ python scripts/run_convergence.py
 python scripts/uq_analysis.py
 python scripts/uq_structural.py
 
-# figures (F1-F9) -> outputs/figures/
-python scripts/make_figures.py
-python scripts/make_mechanism_figure.py
-python scripts/make_structural_pfc_figure.py
-python scripts/make_generality_figure.py
+# robustness checks (answering the advisor review)
+python scripts/run_hyperparam_scan.py         # is each kernel failure intrinsic, or a bad knob? -> outputs/hyperparam_scan/
+python scripts/run_detector_validation.py     # ring-detector audit; also writes figure F11 -> outputs/detector_validation/
+python scripts/run_structural_convergence.py  # free-energy descent, grid/dt convergence, basin stability -> outputs/structural_convergence/
+python scripts/run_fair_k1_basin.py           # does a fairly-tuned spectral kernel reach the correct basin? -> outputs/fair_k1_basin/
+
+# figures (F1-F12 + F_basin) -> outputs/figures/
+python scripts/make_figures.py                       # F1-F6
+python scripts/make_mechanism_figure.py              # F7
+python scripts/make_structural_pfc_figure.py         # F8
+python scripts/make_generality_figure.py             # F9
+python scripts/make_hyperparam_figure.py             # F10     (run_hyperparam_scan first)
+python scripts/make_structural_convergence_figure.py # F12     (run_structural_convergence first)
+python scripts/make_basin_figure.py                  # F_basin (run_fair_k1_basin first); F11 is written by run_detector_validation
 ```
 
 To regenerate the triangular Lennard-Jones cases from scratch (requires LAMMPS):
@@ -110,7 +119,10 @@ python scripts/make_triangular_cases.py        # writes LAMMPS inputs to experim
 - `outputs/production_v3/metrics.csv` — the canonical protocol × case × λ matrix.
 - `outputs/{structural_pfc,structural_pfc_scan,triangular_pfc,uq,convergence_v2}/` — the
   structural-PFC, parameter-scan, generality, uncertainty, and convergence results.
-- `outputs/figures/` — the figures in the manuscript.
+- `outputs/{hyperparam_scan,detector_validation,structural_convergence,fair_k1_basin}/` — the
+  advisor-review robustness checks: kernel-family hyperparameter sweep, ring-detector audit,
+  numerical-soundness study, and the fairly-tuned spectral-kernel basin test.
+- `outputs/figures/` — the figures in the manuscript (F1–F12 and F_basin).
 
 ## Citation
 
