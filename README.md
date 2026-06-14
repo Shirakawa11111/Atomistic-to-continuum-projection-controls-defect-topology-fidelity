@@ -14,9 +14,22 @@ structure the continuum model predicts**.
 ## Key results
 
 - **Basin selection (the physics).** In a structural PFC that genuinely crystallizes graphene's
-  honeycomb, the atoms-to-field projection selects which crystalline minimum the conserved dynamics
-  relaxes into: a faithful projection recovers the correct 5–7 defect cores, while an unfaithful one
-  falls into a distinct structure the dynamics cannot repair.
+  honeycomb, the atoms-to-field projection selects which basin the conserved dynamics *begins* in.
+  A faithful projection begins in the correct **crystalline basin** (a clean honeycomb; ring-L1
+  0.01–0.08 vs the atomistic ground truth); an unfaithful one is trapped in a **metastable disordered
+  basin** (ring-L1 0.7–2.7). This is the dynamical amplification of a fidelity difference already
+  present at the seed: the faithful *initial* reconstruction reproduces the exact atomic topology,
+  including the Stone–Wales 5-7-7-5 core (one peak per atom), whereas the unfaithful ones cannot even
+  resolve the atoms (~300–500 peaks for 1024 atoms).
+- **It is a metastable basin, not a permanent one (stated honestly).** Following the relaxation to
+  3.6×10⁵ steps (≫ the 2.5×10³ benchmark) shows the disordered basin is a genuine metastable
+  attractor — the free energy is stationary to ~10⁻⁴/step over a ~10⁴-step **incubation**, robust to
+  ±10% perturbation (it re-incubates and nucleates at the same step), the crystalline basin is stable
+  — that eventually **nucleates** into the same crystalline minimum (Δ*F*≤0.02). Its lifetime exceeds
+  practical relaxation budgets by 1–2 orders of magnitude, so the projection controls the structure
+  predicted at any practical relaxation; given unbounded relaxation both seeds crystallize. Under
+  relaxation the metastable atomic-scale defect cores anneal toward the surrounding crystal, so
+  "correct basin" means the field stays crystalline — not that the specific 5-7-7-5 core is frozen in.
 - **Three requirements for a faithful projection.** Sweeping each kernel's parameters shows a
   faithful projection must (i) be amplitude-normalized (model stability), (ii) keep spectral content
   up to the lattice's first reciprocal vector |G₁|, and (iii) place density at the atoms rather than
@@ -94,7 +107,15 @@ python scripts/run_detector_validation.py     # ring-detector audit; also writes
 python scripts/run_structural_convergence.py  # free-energy descent, grid/dt convergence, basin stability -> outputs/structural_convergence/
 python scripts/run_fair_k1_basin.py           # does a fairly-tuned spectral kernel reach the correct basin? -> outputs/fair_k1_basin/
 
-# figures (F1-F12 + F_basin) -> outputs/figures/
+# strengthening round: the basin is a metastable basin (incubation -> nucleation)
+python scripts/run_detector_sensitivity.py    # basin invariant to bond-graph cutoff r_bond in {1.3,1.4,1.5} -> outputs/detector_sensitivity/
+python scripts/run_mixed_corners.py           # joint (mixed-corner) parameter robustness; 4 corners hold -> outputs/mixed_corners/
+python scripts/run_landscape_long.py          # asymptotic probe to 3.6e5 steps: incubation -> nucleation -> outputs/landscape/landscape_long.json
+python scripts/run_metastability.py           # +/-10% perturbation test: the disordered tier is a true metastable basin -> outputs/landscape/metastability.json
+
+# figures (F1-F12 + F_basin + F_basinvis + F_landscape) -> outputs/figures/
+python scripts/make_basinvis_figure.py               # F_basinvis (relaxed crystalline-vs-disordered field)
+python scripts/make_landscape_figure.py              # F_landscape (run_landscape_long first; incubation -> nucleation)
 python scripts/make_figures.py                       # F1-F6
 python scripts/make_mechanism_figure.py              # F7
 python scripts/make_structural_pfc_figure.py         # F8

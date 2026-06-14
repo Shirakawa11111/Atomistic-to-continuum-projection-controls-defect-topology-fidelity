@@ -1,0 +1,197 @@
+{
+  "corners": [
+    "baseline",
+    "C1_lowh1_highw",
+    "C2_highh2_loww",
+    "C3_lowh1_lowh2"
+  ],
+  "per_corner": {
+    "baseline": {
+      "params": {
+        "c2_h1": 1.05,
+        "c2_h2": 0.6,
+        "w_ratio": 0.1
+      },
+      "hold": true,
+      "n_unhealthy": 0,
+      "cells": [
+        {
+          "case": "T1",
+          "good_max": 0.006,
+          "bad_min": 0.715,
+          "clean": true,
+          "gap": 109.98
+        },
+        {
+          "case": "T2",
+          "good_max": 0.026,
+          "bad_min": 0.843,
+          "clean": true,
+          "gap": 32.03
+        },
+        {
+          "case": "T3",
+          "good_max": 0.021,
+          "bad_min": 1.704,
+          "clean": true,
+          "gap": 79.27
+        },
+        {
+          "case": "T4",
+          "good_max": 0.035,
+          "bad_min": 1.244,
+          "clean": true,
+          "gap": 35.64
+        },
+        {
+          "case": "T5",
+          "good_max": 0.062,
+          "bad_min": 1.469,
+          "clean": true,
+          "gap": 23.5
+        }
+      ]
+    },
+    "C1_lowh1_highw": {
+      "params": {
+        "c2_h1": 0.95,
+        "c2_h2": 0.6,
+        "w_ratio": 0.13
+      },
+      "hold": true,
+      "n_unhealthy": 0,
+      "cells": [
+        {
+          "case": "T1",
+          "good_max": 0.032,
+          "bad_min": 0.715,
+          "clean": true,
+          "gap": 22.06
+        },
+        {
+          "case": "T2",
+          "good_max": 0.02,
+          "bad_min": 0.834,
+          "clean": true,
+          "gap": 42.32
+        },
+        {
+          "case": "T3",
+          "good_max": 0.032,
+          "bad_min": 1.914,
+          "clean": true,
+          "gap": 59.26
+        },
+        {
+          "case": "T4",
+          "good_max": 0.035,
+          "bad_min": 1.201,
+          "clean": true,
+          "gap": 34.42
+        },
+        {
+          "case": "T5",
+          "good_max": 0.057,
+          "bad_min": 1.396,
+          "clean": true,
+          "gap": 24.36
+        }
+      ]
+    },
+    "C2_highh2_loww": {
+      "params": {
+        "c2_h1": 1.05,
+        "c2_h2": 0.8,
+        "w_ratio": 0.07
+      },
+      "hold": true,
+      "n_unhealthy": 0,
+      "cells": [
+        {
+          "case": "T1",
+          "good_max": 0.037,
+          "bad_min": 0.728,
+          "clean": true,
+          "gap": 19.83
+        },
+        {
+          "case": "T2",
+          "good_max": 0.044,
+          "bad_min": 0.829,
+          "clean": true,
+          "gap": 18.93
+        },
+        {
+          "case": "T3",
+          "good_max": 0.011,
+          "bad_min": 1.204,
+          "clean": true,
+          "gap": 111.51
+        },
+        {
+          "case": "T4",
+          "good_max": 0.04,
+          "bad_min": 1.18,
+          "clean": true,
+          "gap": 29.34
+        },
+        {
+          "case": "T5",
+          "good_max": 0.055,
+          "bad_min": 1.422,
+          "clean": true,
+          "gap": 25.99
+        }
+      ]
+    },
+    "C3_lowh1_lowh2": {
+      "params": {
+        "c2_h1": 0.95,
+        "c2_h2": 0.4,
+        "w_ratio": 0.1
+      },
+      "hold": true,
+      "n_unhealthy": 0,
+      "cells": [
+        {
+          "case": "T1",
+          "good_max": 0.004,
+          "bad_min": 0.728,
+          "clean": true,
+          "gap": 169.28
+        },
+        {
+          "case": "T2",
+          "good_max": 0.022,
+          "bad_min": 1.58,
+          "clean": true,
+          "gap": 72.14
+        },
+        {
+          "case": "T3",
+          "good_max": 0.043,
+          "bad_min": 2.237,
+          "clean": true,
+          "gap": 52.01
+        },
+        {
+          "case": "T4",
+          "good_max": 0.043,
+          "bad_min": 1.201,
+          "clean": true,
+          "gap": 28.0
+        },
+        {
+          "case": "T5",
+          "good_max": 0.057,
+          "bad_min": 1.388,
+          "clean": true,
+          "gap": 24.22
+        }
+      ]
+    }
+  },
+  "all_hold": true,
+  "any_unhealthy": false,
+  "worst_good_vs_bad_gap": 18.93
+}
